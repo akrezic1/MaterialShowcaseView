@@ -239,16 +239,6 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
 
         if (mTarget != null) {
 
-            /**
-             * If we're on lollipop then make sure we don't draw over the nav bar
-             */
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                mBottomMargin = getSoftButtonsBarSizePort((Activity) getContext());
-                FrameLayout.LayoutParams contentLP = (LayoutParams) getLayoutParams();
-
-                if (contentLP!=null && contentLP.bottomMargin != mBottomMargin)
-                    contentLP.bottomMargin = mBottomMargin;
-            }
 
             // apply the target position
             Point targetPoint = mTarget.getPoint();
